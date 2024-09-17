@@ -16,13 +16,13 @@ mkdir -p files/etc/openclash/core
 
 
 # openclash 的 dev内核
-CLASH_DEV_URL="https://github.com/vernesong/OpenClash/raw/core/master/dev/clash-linux-amd64.tar.gz"
+# CLASH_DEV_URL="https://github.com/vernesong/OpenClash/raw/core/master/dev/clash-linux-amd64.tar.gz"
 
 # openclash 的 TUN内核
-CLASH_TUN_VERSION=$(curl -sL https://github.com/vernesong/OpenClash/raw/core/master/core_version | head -n 2 | tail -n 1)
-CLASH_TUN_URL="https://github.com/vernesong/OpenClash/raw/core/master/premium/clash-linux-amd64-$CLASH_TUN_VERSION.gz"
+# CLASH_TUN_VERSION=$(curl -sL https://github.com/vernesong/OpenClash/raw/core/master/core_version | head -n 2 | tail -n 1)
+# CLASH_TUN_URL="https://github.com/vernesong/OpenClash/raw/core/master/premium/clash-linux-amd64-$CLASH_TUN_VERSION.gz"
 # openclash 的 Meta内核版本
-# CLASH_META_URL="https://github.com/vernesong/OpenClash/raw/core/master/meta/clash-linux-amd64.tar.gz"
+CLASH_META_URL="https://github.com/vernesong/OpenClash/raw/core/master/meta/clash-linux-amd64.tar.gz"
 
 # d大 的 dev内核
 # CLASH_DEV_URL=$(curl -sL https://api.github.com/repos/Dreamacro/clash/releases/latest | grep /clash-linux-amd64 | awk -F '"' '{print $4}' | head -n 1)
@@ -39,9 +39,9 @@ CLASH_META_URL=$( curl -sL https://api.github.com/repos/MetaCubeX/Clash.Meta/rel
 
 
 # 给内核解压
-wget -qO- $CLASH_DEV_URL | tar xOvz > files/etc/openclash/core/clash
-wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
-# wget -qO- $CLASH_META_URL | tar xOvz > files/etc/openclash/core/clash_meta
+# wget -qO- $CLASH_DEV_URL | tar xOvz > files/etc/openclash/core/clash
+# wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
+wget -qO- $CLASH_META_URL | tar xOvz > files/etc/openclash/core/clash_meta  
 
 # wget -qO- $CLASH_DEV_URL | gunzip -c > files/etc/openclash/core/clash
 # wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
