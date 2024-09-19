@@ -10,6 +10,8 @@ rm -rf ./feeds/packages/net/chinadns-ng
 #克隆依赖插件
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
 git clone https://github.com/morytyann/OpenWrt-mihomo.git package/luci-app-mihomo
+git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
+
 
 
 #克隆的源码放在small文件夹
