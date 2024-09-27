@@ -17,7 +17,7 @@ on:
   repository_dispatch:
   workflow_dispatch:
   schedule:
-   - cron: 30 00 * * 5
+   - cron: 30 00 * * 4
    #   分,时,日,月,星期。每周五 0时30分执行一次 (UTC时间)
   
 env:
